@@ -19,17 +19,24 @@ export async function middleware(req: NextRequest) {
       },
     }
   );
-  const data = await res.json();
-  if (parseInt(data?.data?.maintenance_mode_status) === 1) {
-    if (curentUrl(req.nextUrl.pathname) === true) {
-      return NextResponse.next();
+  try{
+    const data = await res.json();
+    if (parseInt(data?.data?.maintenance_mode_status) === 1) {
+      if (curentUrl(req.nextUrl.pathname) === true) {
+        return NextResponse.next();
+      }
+      // return NextResponse.redirect(
+      //   `${process.env.NEXT_PUBLIC_HOSTED_CLIENT_URL}maintenance`
+      // );
+      return NextResponse.redirect(new URL("/maintenance", req.url));
+      // return NextResponse.rewrite(new URL("/maintenance", req.url));
     }
-    // return NextResponse.redirect(
-    //   `${process.env.NEXT_PUBLIC_HOSTED_CLIENT_URL}maintenance`
-    // );
-    return NextResponse.redirect(new URL("/maintenance", req.url));
-    // return NextResponse.rewrite(new URL("/maintenance", req.url));
   }
+  catch(err){
+    console.log(err)
+  }
+
+ 
   // return NextResponse.rewrite(req.nextUrl);
 }
 
