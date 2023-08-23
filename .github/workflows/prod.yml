@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy-front:
-    name: Build and deploy Back-end
+    name: Build and deploy Front-end
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
