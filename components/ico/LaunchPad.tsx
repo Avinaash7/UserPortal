@@ -1,5 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
+import Image from "next/image"
 import React from "react";
 
 const LaunchPad = ({ viewMore, data, core, image, link }: any) => {
@@ -11,7 +12,7 @@ const LaunchPad = ({ viewMore, data, core, image, link }: any) => {
           {}
           {image !== false && (
             <div className="col-lg-4 col-12  mb-2">
-              <img
+              <Image
                 src={
                   data?.image
                     ? data?.image

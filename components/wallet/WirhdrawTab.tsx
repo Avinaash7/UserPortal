@@ -6,6 +6,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
 import { WalletWithdrawProcessApiAction } from "state/actions/wallet";
+import Image from "next/image"
 
 const WirhdrawTab = ({ response, TurnoffSetShow }: any) => {
   const { t } = useTranslation("common");
@@ -66,7 +67,7 @@ const WirhdrawTab = ({ response, TurnoffSetShow }: any) => {
           <div className="withdrawal-info-area" id="withdrawal_wallet_area">
             <div className="withdrawal-info-top">
               <div className="balance-box">
-                <img
+                <Image
                   className="icon"
                   src={response?.wallet?.coin_icon || "/bitcoin.png"}
                   alt="coin"

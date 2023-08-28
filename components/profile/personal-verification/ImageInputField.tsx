@@ -1,6 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import Image from "next/image"
 
 const ImageInputField = ({ setter, getter }: any) => {
   const { t } = useTranslation("common");
@@ -24,7 +25,7 @@ const ImageInputField = ({ setter, getter }: any) => {
       <div className="col-lg-6 mb-lg-0 mb-4">
         <div className="idcard">
           <div className="container cstm-img-picker">
-            <img src={getter} className="img-fluid" alt="" />
+            <Image src={getter} className="img-fluid" alt="" />
           </div>
         </div>
       </div>

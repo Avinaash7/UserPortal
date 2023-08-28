@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image"
 import { BsBarChartLine, BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { BiShapeCircle } from "react-icons/bi";
 import { BiMoney } from "react-icons/bi";
@@ -83,7 +84,7 @@ const Navbar = ({ settings, isLoggedIn }: any) => {
                   <div className="cp-user-logo">
                     <Link href="/">
                       <a href="">
-                        <img
+                        <Image
                           src={logo || ""}
                           className="img-fluid cp-user-logo-large"
                           alt=""

@@ -10,6 +10,7 @@ import { IoMdGlobe } from "react-icons/io";
 import { RiNotificationBadgeLine } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { LogoutAction } from "state/actions/user";
+import Image from "next/image"
 
 const NotificationDropdown = ({
   isLoggedIn,
@@ -55,7 +56,7 @@ const NotificationDropdown = ({
                           : "userDeactive"
                         } big-user-thumb`}
                     >
-                      <img
+                      <Image
                         src={user?.photo}
                         className="img-fluid profile-avatar"
                         alt=""
@@ -123,7 +124,7 @@ const NotificationDropdown = ({
                         ? "99+"
                         : notificationData?.length}
                     </span>
-                    <img src="/notification.png" className="img-fluid" alt="" />
+                    <Image src="/notification.png" className="img-fluid" alt="" />
                   </button>
                   <div className="dropdown-menu notification-list dropdown-menu-right">
                     <div className="notify-menu">
@@ -276,7 +277,7 @@ const NotificationDropdown = ({
               setActive(true);
             }}
           >
-            <img src="/menu.svg" className="img-fluid" alt="" />
+            <Image src="/menu.svg" className="img-fluid" alt="" />
           </div>
         </div>
       ) : (

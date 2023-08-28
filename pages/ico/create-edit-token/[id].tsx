@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { getContractAddressDetails, icoListDetails } from "service/launchpad";
 import { toast } from "react-toastify";
 import Footer from "components/common/footer";
+import Image from "next/image"
 
 const TokenCreate = ({ id, edit, data }: any) => {
   const { t } = useTranslation("common");
@@ -338,7 +339,7 @@ const TokenCreate = ({ id, edit, data }: any) => {
                       }}
                     />
                     {data?.image_path && (
-                      <img src={data?.image_path} className="img-fluid mt-2" />
+                      <Image src={data?.image_path} className="img-fluid mt-2" />
                     )}
                   </div>
                   <div className="col-md-12 form-input-div">

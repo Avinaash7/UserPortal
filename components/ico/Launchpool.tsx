@@ -2,7 +2,7 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import React from "react";
 import PoolCard from "./PoolCard";
-
+import Image from "next/image"
 const Launchpool = ({ viewMore }: any) => {
   const { t } = useTranslation("common");
   return (
@@ -14,7 +14,7 @@ const Launchpool = ({ viewMore }: any) => {
             <p>{t("Completed")}</p>
           </div>
           <div className="mt-3 title-pool">
-            <img alt="GAL" src="/gal.svg" className="pool-icon " />
+            <Image alt="GAL" src="/gal.svg" className="pool-icon " />
             <h2 className=" ml-2">GAL</h2>
           </div>
           <p className="mt-3 desc-pool">

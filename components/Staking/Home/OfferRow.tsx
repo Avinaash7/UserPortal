@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Image from "next/image"
 
 const OfferRow = ({ offers, item, isLoggedIn }: any) => {
   const [selectedDays, setSelectedDays] = useState(0);
@@ -12,7 +13,7 @@ const OfferRow = ({ offers, item, isLoggedIn }: any) => {
     <tr className="tableRow">
       <td>
         <div className="tableImg d-flex align-items-center">
-          <img src={selectedData?.coin_icon} alt="" />
+          <Image src={selectedData?.coin_icon} alt="" />
           <h5>{item}</h5>
         </div>
       </td>

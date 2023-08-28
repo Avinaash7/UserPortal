@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
+import Image from "next/image"
 
 const Footer = () => {
   const { t } = useTranslation("common");
@@ -22,7 +23,7 @@ const Footer = () => {
                   <div className="cp-user-logo">
                     <Link href="/">
                       <a href="">
-                        <img
+                        <Image
                           src={logo || ""}
                           className="img-fluid cp-user-logo-large"
                           alt=""
@@ -202,7 +203,7 @@ const Footer = () => {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              <img
+                              <Image
                                 src={social.media_icon}
                                 alt={social.media_title}
                                 width={18}

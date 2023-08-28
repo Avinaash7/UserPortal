@@ -7,6 +7,7 @@ import { launchpadCreateUpdatePhaseAction } from "state/actions/launchpad";
 import { GetCoinListApi } from "service/wallet";
 import { icoListDetails, phaseListDetails } from "service/launchpad";
 import { parseCookies } from "nookies";
+import Image from "next/image"
 
 const CreateEditPhase = ({ id, edit, data }: any) => {
   const { t } = useTranslation("common");
@@ -325,7 +326,7 @@ const CreateEditPhase = ({ id, edit, data }: any) => {
                     });
                   }}
                 />
-                <img src={phaseForm.editImage} className="img-fluid mt-2" />
+                <Image src={phaseForm.editImage} className="img-fluid mt-2" />
               </div>
               <div className="col-md-12 form-input-div">
                 <button type="submit" className="primary-btn">

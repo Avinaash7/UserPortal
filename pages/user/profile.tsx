@@ -1,7 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import ProfileComp from "components/profile/profile";
 import { parseCookies } from "nookies";
-
+import Image from "next/image"
 import { GetUserInfoByTokenServer } from "service/user";
 import ProfileSidebar from "layout/profile-sidebar";
 import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
@@ -40,7 +40,7 @@ const Profile: NextPage = ({ user, profileActivity }: any) => {
                               : "userProfileDeactive"
                           } user-thumbnail`}
                         >
-                          <img
+                          <Image
                             src={user?.photo}
                             className="img-fluid"
                             alt="user"

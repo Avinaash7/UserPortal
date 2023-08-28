@@ -3,6 +3,7 @@ import Qr from "components/common/qr";
 import { copyTextById, formateZert } from "common";
 import useTranslation from "next-translate/useTranslation";
 import { GetWalletAddressAction } from "state/actions/wallet";
+import Image from "next/image"
 
 const DepositTab = ({ response, TurnoffSetShow, id }: any) => {
   const { t } = useTranslation("common");
@@ -18,7 +19,7 @@ const DepositTab = ({ response, TurnoffSetShow, id }: any) => {
           <div className="deposit-info-area" id="wallet_deposit_area">
             <div className="deposit-info-top">
               <div className="balance-box">
-                <img
+                <Image
                   className="icon"
                   src={response?.deposit?.coin_icon || "/bitcoin.png"}
                   alt="coin"

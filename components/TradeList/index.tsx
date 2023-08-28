@@ -1,5 +1,6 @@
 import router from "next/router";
 import React from "react";
+import Image from "next/image"
 
 export const TradeList = ({ coinList }: any) => {
   return (
@@ -16,7 +17,7 @@ export const TradeList = ({ coinList }: any) => {
           }}
           key={`coinList${index}`}
           className="coinList">
-          <img src={item.icon} alt="" />
+          <Image src={item.icon} alt="" />
           <a
             href={
               router.locale !== "en"

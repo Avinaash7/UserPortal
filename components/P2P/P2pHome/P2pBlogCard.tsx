@@ -1,3 +1,4 @@
+import Image from "next/image"
 export const P2pBlogCard = ({ item }: any) => {
   return (
     <div className="col-md-6 col-lg-4">
@@ -5,7 +6,7 @@ export const P2pBlogCard = ({ item }: any) => {
         <a href="">
           <div className="row">
             <div className="col-12">
-              <img className="rounded" src={item.img} alt="" />
+              <Image className="rounded" src={item.img} alt="" />
             </div>
             <div className="col-12 pt-3">
               <div className="newsCardText">

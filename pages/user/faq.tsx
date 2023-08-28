@@ -4,6 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useState } from "react";
 import { getFaqList } from "service/faq";
 import { customPage, landingPage } from "service/landing-page";
+import Image from "next/image"
 
 const Index: NextPage = ({ faq }: any) => {
   const { t } = useTranslation("common");
@@ -51,7 +52,7 @@ const Index: NextPage = ({ faq }: any) => {
                 aria-label="Close"
               ></button>
               <div className="text-center">
-                <img
+                <Image
                   src="/add-pockaet-vector.svg"
                   className="img-fluid img-vector"
                   alt=""
@@ -126,7 +127,7 @@ const Index: NextPage = ({ faq }: any) => {
               </div>
               <div className="col-lg-6 mt-5 mt-lg-0">
                 <div className="faq-image text-center">
-                  <img src="/faq-image.png" alt="faq-image" />
+                  <Image src="/faq-image.png" alt="faq-image" />
                 </div>
               </div>
             </div>

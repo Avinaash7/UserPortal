@@ -6,7 +6,7 @@ import {
   UploadPassportImageAction,
   UploadVoterImageAction,
 } from "state/actions/user";
-
+import Image from "next/image"
 const NidModal = ({ type, kycDetails }: any) => {
   const [previousType, setPreviousType] = useState<string>("");
   const [frontSide, setFrontSide] = useState(null);
@@ -124,11 +124,11 @@ const NidModal = ({ type, kycDetails }: any) => {
                         <label className="container cstm-img-picker">
                           {frontSide && (
                             //@ts-ignore
-                            <img src={showFront} className="img-fluid" alt="" />
+                            <Image src={showFront} className="img-fluid" alt="" />
                           )}
 
                           {existingKyc?.front_image ? (
-                            <img
+                            <Image
                               src={existingKyc?.front_image}
                               className="img-fluid"
                               alt=""
@@ -158,11 +158,11 @@ const NidModal = ({ type, kycDetails }: any) => {
                         <label className="container cstm-img-picker">
                           {backSide && (
                             //@ts-ignore
-                            <img src={showBack} className="img-fluid" alt="" />
+                            <Image src={showBack} className="img-fluid" alt="" />
                           )}
 
                           {existingKyc?.back_image ? (
-                            <img
+                            <Image
                               src={existingKyc?.back_image}
                               className="img-fluid"
                               alt=""
@@ -193,10 +193,10 @@ const NidModal = ({ type, kycDetails }: any) => {
                         <label className="container cstm-img-picker">
                           {showSelfe && (
                             //@ts-ignore
-                            <img src={showSelfe} className="img-fluid" alt="" />
+                            <Image src={showSelfe} className="img-fluid" alt="" />
                           )}
                           {existingKyc?.selfie ? (
-                            <img
+                            <Image
                               src={existingKyc?.selfie}
                               className="img-fluid"
                               alt=""

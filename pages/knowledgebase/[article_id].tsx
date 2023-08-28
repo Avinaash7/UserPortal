@@ -7,6 +7,7 @@ import { articleDetails } from "service/knowledgebase";
 import { customPage, landingPage } from "service/landing-page";
 import { getNewsDetails } from "service/news";
 import Link from "next/link";
+import Image from "next/image"
 
 const KnowledgebaseArticleDetails = ({ articleDetails }: any) => {
   return (
@@ -16,7 +17,7 @@ const KnowledgebaseArticleDetails = ({ articleDetails }: any) => {
           <div className="col-md-6 col-lg-8 mt-4">
             <div className="main_img">
               {articleDetails.article_details?.feature_image && (
-                <img
+                <Image
                   className="rounded"
                   src={articleDetails.article_details?.feature_image}
                   alt="img"

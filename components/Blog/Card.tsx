@@ -1,6 +1,7 @@
 import moment from "moment";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image"
 
 const BlogCard = ({ blog }: any) => {
   return (
@@ -8,7 +9,7 @@ const BlogCard = ({ blog }: any) => {
       <Link href={"/blog/" + blog?.post_id}>
         <a>
           <div className="blogCard p-4 shadow-sm rounded card">
-            <img
+            <Image
               className="rounded"
               src={blog?.thumbnail}
               alt="Card image cap"

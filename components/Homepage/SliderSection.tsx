@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
 import { TfiAnnouncement } from "react-icons/tfi";
+import Image from "next/image"
 const SliderSection = ({
   bannerListdata,
   landing,
@@ -75,7 +76,7 @@ const SliderSection = ({
               </div>
             ))}
           </div>
-          <img
+          <Image
             src={
               landing?.landing_advertisement_image
                 ? landing?.landing_advertisement_image

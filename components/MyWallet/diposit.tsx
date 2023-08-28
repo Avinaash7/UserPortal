@@ -6,6 +6,7 @@ import Qr from "components/common/qr";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import QRCode from "react-qr-code";
+import Image from "next/image"
 
 export const DipositComponent = ({
   responseData,
@@ -41,7 +42,7 @@ export const DipositComponent = ({
               <h5>{t("Total Balance")}</h5>
               <div className="coin-list-item">
                 <div className="coint-flex">
-                  <img
+                  <Image
                     className="icon"
                     src={responseData?.deposit?.coin_icon || "/bitcoin.png"}
                     alt="coin"

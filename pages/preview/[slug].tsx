@@ -1,5 +1,6 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Slider from "react-slick";
+import Image from "next/image"
 import Link from "next/link";
 import {
   landingPage,
@@ -133,7 +134,7 @@ const Home: NextPage = ({
                         )}
                       </div>
                       <div className="col-md-6 ">
-                        <img
+                        <Image
                           src={
                             landing_banner_image ||
                             "/undraw_crypto_flowers_re_dyqo.svg.svg"
@@ -153,7 +154,7 @@ const Home: NextPage = ({
                         {bannerListdata?.map((item: any, index: number) => (
                           <div className="single-banner" key={index}>
                             <Link href={`/banner/${item.slug}`}>
-                              <img
+                              <Image
                                 src={item.image}
                                 alt="about-image-phone"
                                 className="slider-image-class"
@@ -328,7 +329,7 @@ const Home: NextPage = ({
                                         key={index}
                                       >
                                         <td className="d-flex">
-                                          <img
+                                          <Image
                                             className="icon mr-3"
                                             src={
                                               item?.coin_icon || "/bitcoin.png"
@@ -364,12 +365,12 @@ const Home: NextPage = ({
                                         </td>
                                         <td>
                                           {item.price_change >= 0 ? (
-                                            <img
+                                            <Image
                                               src="/chart-image-1.png"
                                               alt="chart-image"
                                             />
                                           ) : (
-                                            <img
+                                            <Image
                                               src="/chart-image-2.png"
                                               alt="chart-image"
                                             />
@@ -501,7 +502,7 @@ const Home: NextPage = ({
                                         key={index}
                                       >
                                         <td className="d-flex">
-                                          <img
+                                          <Image
                                             className="icon mr-3"
                                             src={
                                               item?.coin_icon || "/bitcoin.png"
@@ -537,12 +538,12 @@ const Home: NextPage = ({
                                         </td>
                                         <td>
                                           {item.price_change >= 0 ? (
-                                            <img
+                                            <Image
                                               src="/chart-image-1.png"
                                               alt="chart-image"
                                             />
                                           ) : (
-                                            <img
+                                            <Image
                                               src="/chart-image-2.png"
                                               alt="chart-image"
                                             />
@@ -670,7 +671,7 @@ const Home: NextPage = ({
                                         key={index}
                                       >
                                         <td className="d-flex">
-                                          <img
+                                          <Image
                                             className="icon mr-3"
                                             src={
                                               item?.coin_icon || "/bitcoin.png"
@@ -706,12 +707,12 @@ const Home: NextPage = ({
                                         </td>
                                         <td>
                                           {item.price_change >= 0 ? (
-                                            <img
+                                            <Image
                                               src="/chart-image-1.png"
                                               alt="chart-image"
                                             />
                                           ) : (
-                                            <img
+                                            <Image
                                               src="/chart-image-2.png"
                                               alt="chart-image"
                                             />
@@ -770,7 +771,7 @@ const Home: NextPage = ({
                       <div className="row align-items-center">
                         <div className="col-lg-6">
                           <div className="trade-anywhere-left">
-                            <img
+                            <Image
                               className="trend-image"
                               src={landing?.trade_anywhere_left_img}
                               alt="trade-imge"
@@ -787,7 +788,7 @@ const Home: NextPage = ({
                                       href={landing?.apple_store_link}
                                       className="item-link"
                                     >
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/apple-logo.png"
                                         alt="apple-logo"
@@ -800,7 +801,7 @@ const Home: NextPage = ({
                                 {landing?.google_store_link && (
                                   <li className="single-item">
                                     <a href="#" className="item-link">
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/google-play.png"
                                         alt="google-play"
@@ -816,7 +817,7 @@ const Home: NextPage = ({
                                       href={landing?.macos_store_link}
                                       className="item-link"
                                     >
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/command-symbol.png"
                                         alt="command-symbol"
@@ -832,7 +833,7 @@ const Home: NextPage = ({
                                       href={landing?.windows_store_link}
                                       className="item-link"
                                     >
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/windows.png"
                                         alt="windows"
@@ -848,7 +849,7 @@ const Home: NextPage = ({
                                       href={landing?.windows_store_link}
                                       className="item-link"
                                     >
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/linux.png"
                                         alt="linux"
@@ -864,7 +865,7 @@ const Home: NextPage = ({
                                       href={landing?.api_link}
                                       className="item-link"
                                     >
-                                      <img
+                                      <Image
                                         className="icon"
                                         src="/api.png"
                                         alt="api"
@@ -894,7 +895,7 @@ const Home: NextPage = ({
                       <div className="row align-items-center">
                         <div className="col-lg-6">
                           <div className="trade-anywhere-left">
-                            <img
+                            <Image
                               src={landing?.trade_anywhere_left_img}
                               alt="integration"
                             />
@@ -921,7 +922,7 @@ const Home: NextPage = ({
                     <div className="row align-items-center">
                       <div className="col-lg-6">
                         <div className="trade-anywhere-left">
-                          <img
+                          <Image
                             src={landing?.secure_trade_left_img}
                             alt="integration"
                           />
@@ -959,7 +960,7 @@ const Home: NextPage = ({
                       {featureListdata?.map((feature: any, index: any) => (
                         <div className="col-lg-3 col-md-6" key={index}>
                           <a href="#" className="single-card">
-                            <img
+                            <Image
                               className="card-icon"
                               src={feature.feature_icon}
                               alt="icon"

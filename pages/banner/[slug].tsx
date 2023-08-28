@@ -4,6 +4,7 @@ import { GetServerSideProps } from "next";
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { bannerDetailsBySlug } from "service/landing-page";
+import Image from "next/image"
 //@ts-ignore
 import sanitizeHtml from "sanitize-html";
 
@@ -65,7 +66,7 @@ const Bannerdetails = ({ details, status }: any) => {
           <p className="mb-2">
             {t("Last revised:")} {formateData(details.updated_at)}
           </p>
-          <img src={details.image} className="cover-image mb-5" />
+          <Image src={details.image} className="cover-image mb-5" />
           <div
             dangerouslySetInnerHTML={{
               __html: clean(details.description),

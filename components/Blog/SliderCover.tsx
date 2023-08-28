@@ -1,6 +1,7 @@
 import moment from "moment";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image"
 import Slider from "react-slick";
 const SliderCover = ({ featuredblogs }: any) => {
   const settings = {
@@ -20,7 +21,7 @@ const SliderCover = ({ featuredblogs }: any) => {
             <a>
               <div className="row mt-4">
                 <div className="col-md-5">
-                  <img
+                  <Image
                     className="SliderBlog rounded"
                     src={featuredblog?.thumbnail}
                   />

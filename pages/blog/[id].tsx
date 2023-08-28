@@ -3,6 +3,7 @@ import BlogCard from "components/Blog/Card";
 import { GetServerSideProps } from "next";
 import { pageAvailabilityCheck } from "middlewares/ssr-authentication-check";
 import { getBlogDetails } from "service/blog";
+import Image from "next/image"
 import CommentSection from "components/Blog/CommentSection";
 import { customPage, landingPage } from "service/landing-page";
 import Footer from "components/common/footer";
@@ -52,7 +53,7 @@ const BlogDetails = ({ BlogNewsSettings }: any) => {
               </small>
               <hr />
               {blogDetails?.data?.details?.thumbnail && (
-                <img
+                <Image
                   className="rounded my-3"
                   src={blogDetails?.data?.details?.thumbnail}
                   alt=""

@@ -1,6 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
 import { useEffect, useState } from "react";
+import Image from "next/image"
 import {
   UserSettingsAction,
   Google2faLoginAction,
@@ -54,7 +55,7 @@ const Settings: NextPage = () => {
                         </div>
                         <div className="cp-user-setting-card-inner">
                           <div className="cp-user-auth-icon">
-                            <img
+                            <Image
                               src="/gauth.svg"
                               className="img-fluid"
                               alt=""

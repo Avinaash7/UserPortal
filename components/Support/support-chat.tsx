@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
 import { BsFillFileEarmarkImageFill } from "react-icons/bs";
+import Image from "next/image"
 
 export const SupportChat = ({
   sendMessage,
@@ -45,7 +46,7 @@ export const SupportChat = ({
                     )}
 
                     <div>
-                      <img
+                      <Image
                         className="chat_img ml-1"
                         src={chat?.user?.photo}
                         alt=""
@@ -61,7 +62,7 @@ export const SupportChat = ({
                           rel="noreferrer"
                           className="send_image mb-2"
                         >
-                          <img
+                          <Image
                             height={100}
                             className="rounded"
                             src={image?.file_link}
@@ -83,7 +84,7 @@ export const SupportChat = ({
                 <div className="col-md-8 chat_layout_left">
                   <div className="d-flex justify-content-between my-2">
                     <div>
-                      <img
+                      <Image
                         className="chat_img"
                         src={chat?.user?.photo}
                         alt=""
@@ -107,7 +108,7 @@ export const SupportChat = ({
                           rel="noreferrer"
                           className="send_image"
                         >
-                          <img
+                          <Image
                             height={100}
                             className="rounded mb-2"
                             src={image?.file_link}

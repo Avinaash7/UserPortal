@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"
 
 const SellingSection = ({ data }: any) => {
   return (
@@ -11,7 +12,7 @@ const SellingSection = ({ data }: any) => {
           {data?.feature_list?.map((item: any, index: number) => (
             <div key={index} className="col-lg-3 col-md-6">
               <a className="single-card">
-                <img
+                <Image
                   className="card-icon"
                   src={item.image ? item.image : "/chooseOne.svg"}
                   alt="icon"

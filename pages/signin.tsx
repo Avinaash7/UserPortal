@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import { Formik, Field, Form } from "formik";
 //@ts-ignore
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Image from "next/image"
 import Link from "next/link";
 import { authPageRequireCheck } from "middlewares/ssr-authentication-check";
 import useTranslation from "next-translate/useTranslation";
@@ -50,7 +50,7 @@ const Signin: NextPage = () => {
           <div className="user-content-text text-center text-md-left">
             <Link href="/">
               <a className="auth-logo" href="">
-                <img
+                <Image
                   width="65%"
                   src={settings.logo || ""}
                   className="pt-5 pt-md-4"
@@ -81,7 +81,7 @@ const Signin: NextPage = () => {
               <div className="user-content-text text-left d-block d-md-none">
                 <Link href="/">
                   <a className="auth-logo" href="">
-                    <img
+                    <Image
                       width="60%"
                       src={settings.logo || ""}
                       className="pt-5 pt-md-4"

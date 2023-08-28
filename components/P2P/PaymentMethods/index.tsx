@@ -1,3 +1,4 @@
+import Image from "next/image"
 export const PaymentMethodTable = () => {
   return (
     <div className="container">
@@ -20,7 +21,7 @@ export const PaymentMethodTable = () => {
                 <tr className="tableRow">
                   <td>
                     <div className="tableImg d-flex align-items-center">
-                      <img
+                      <Image
                         src="https://api-tradex.nftarttoken.xyz/images/avatars/yellow-hat.png"
                         alt=""
                       />

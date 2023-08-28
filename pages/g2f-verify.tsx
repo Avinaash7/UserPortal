@@ -8,6 +8,7 @@ import { GetServerSideProps } from "next";
 import useTranslation from "next-translate/useTranslation";
 import { RootState } from "state/store";
 import Link from "next/link";
+import Image from "next/image"
 
 const G2fverify = () => {
   const { settings } = useSelector((state: RootState) => state.common);
@@ -24,7 +25,7 @@ const G2fverify = () => {
         <div className="user-content-text text-center text-md-left">
           <Link href="/">
             <a className="auth-logo" href="">
-              <img
+              <Image
                 width="65%"
                 src={settings.logo || ""}
                 className="pt-5 pt-md-4"
@@ -55,7 +56,7 @@ const G2fverify = () => {
             <div className="user-content-text text-left d-block d-md-none">
               <Link href="/">
                 <a className="auth-logo" href="">
-                  <img
+                  <Image
                     width="60%"
                     src={settings.logo || ""}
                     className="pt-5 pt-md-4"

@@ -15,7 +15,7 @@ export const SingleLaunchPad = ({ data }: any) => {
         <div className="singleLaunchPadHero">
           <div className="singleLaunchPadHeroFlex">
             <div className="">
-              <img
+              <Image
                 className="singleLaunchPadImg icoImage"
                 src={data?.image ? data?.image : "/launchpad.png"}
                 alt="---"

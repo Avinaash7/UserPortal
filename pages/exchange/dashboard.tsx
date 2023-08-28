@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import DashboardNavbar from "components/common/dashboardNavbar";
 import { useEffect, useState } from "react";
-
+import Image from "next/image"
 import Loading from "components/common/loading";
 import SelectCurrency from "components/exchange/selectCurrency";
 import CurrencyLevel from "components/exchange/currencyLevel";
@@ -175,10 +175,11 @@ const Dashboard: NextPage = () => {
                     aria-label="Close"
                     className="close"
                   >
-                    <img alt="" className="img-fluid" />
+                    <img
+                    alt="" className="img-fluid" />
                   </button>
                   <div className="text-center">
-                    <img
+                    <Image
                       src="/add-pockaet-vector.svg"
                       alt=""
                       className="img-fluid img-vector"

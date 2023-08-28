@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import Image from "next/image"
 
 export const NewsSlider = ({ PopularNews }: any) => {
   var settings = {
@@ -44,7 +45,7 @@ export const NewsSlider = ({ PopularNews }: any) => {
             <Link href={"/news/" + item?.post_id} key={index}>
               <a>
                 <div>
-                  <img
+                  <Image
                     className="rounded SliderNews"
                     src={item?.thumbnail}
                     alt=""

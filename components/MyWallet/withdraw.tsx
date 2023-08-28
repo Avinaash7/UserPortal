@@ -14,6 +14,7 @@ import {
   WITHDRAW_FESS_FIXED,
   WITHDRAW_FESS_PERCENT,
 } from "helpers/core-constants";
+import Image from "next/image"
 
 export const WithdrawComponent = ({ responseData, router, fullPage }: any) => {
   const { t } = useTranslation("common");
@@ -89,7 +90,7 @@ export const WithdrawComponent = ({ responseData, router, fullPage }: any) => {
               <h5>{t("Total Balance")}</h5>
               <div className="coin-list-item">
                 <div className="coint-flex">
-                  <img
+                  <Image
                     className="icon"
                     src={responseData?.wallet?.coin_icon || "/bitcoin.png"}
                     alt="coin"

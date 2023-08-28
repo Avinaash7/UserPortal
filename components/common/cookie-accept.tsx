@@ -3,13 +3,14 @@ import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
+import Image from "next/image"
 
 const CookieAccept = ({ iUnderStand }: any) => {
   const { t } = useTranslation("common");
   const { settings } = useSelector((state: RootState) => state.common);
   return (
     <div className="wrapper">
-      <img src={settings.cookie_image || "/undraw_warning_re_eoyh.svg"} />
+      <Image src={settings.cookie_image || "/undraw_warning_re_eoyh.svg"} />
       <div className="content">
         <header>{settings.cookie_header || t("Cookies Constent")}</header>
         <p>

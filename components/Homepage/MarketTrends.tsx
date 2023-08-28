@@ -2,7 +2,7 @@ import ImageComponent from "components/common/ImageComponent";
 import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import React from "react";
-
+import Image from "next/image"
 const MarketTrends = ({
   landing,
   asset_coin_pairs,
@@ -145,7 +145,7 @@ const MarketTrends = ({
                           {asset_coin_pairs?.map((item: any, index: number) => (
                             <tr role="row" className="odd" key={index}>
                               <td className="d-flex">
-                                <img
+                                <Image
                                   className="icon mr-3"
                                   src={item?.coin_icon || "/bitcoin.png"}
                                   alt="coin"
@@ -177,13 +177,13 @@ const MarketTrends = ({
                               </td>
                               <td>
                                 {item.price_change >= 0 ? (
-                                  <img
+                                  <Image
                                     src="/chart-image-1.png"
                                     alt="chart-image"
                                     className="chart-img"
                                   />
                                 ) : (
-                                  <img
+                                  <Image
                                     src="/chart-image-2.png"
                                     alt="chart-image"
                                     className="chart-img"
@@ -311,7 +311,7 @@ const MarketTrends = ({
                             (item: any, index: number) => (
                               <tr role="row" className="odd" key={index}>
                                 <td className="d-flex">
-                                  <img
+                                  <Image
                                     className="icon mr-3"
                                     src={item?.coin_icon || "/bitcoin.png"}
                                     alt="coin"
@@ -345,13 +345,13 @@ const MarketTrends = ({
                                 </td>
                                 <td>
                                   {item.price_change >= 0 ? (
-                                    <img
+                                    <Image
                                       src="/chart-image-1.png"
                                       alt="chart-image"
                                       className="chart-img"
                                     />
                                   ) : (
-                                    <img
+                                    <Image
                                       src="/chart-image-2.png"
                                       alt="chart-image"
                                       className="chart-img"
@@ -476,7 +476,7 @@ const MarketTrends = ({
                             (item: any, index: number) => (
                               <tr role="row" className="odd" key={index}>
                                 <td className="d-flex">
-                                  <img
+                                  <Image
                                     className="icon mr-3"
                                     src={item?.coin_icon || "/bitcoin.png"}
                                     alt="coin"
@@ -510,13 +510,13 @@ const MarketTrends = ({
                                 </td>
                                 <td>
                                   {item.price_change >= 0 ? (
-                                    <img
+                                    <Image
                                       src="/chart-image-1.png"
                                       alt="chart-image"
                                       className="chart-img"
                                     />
                                   ) : (
-                                    <img
+                                    <Image
                                       src="/chart-image-2.png"
                                       alt="chart-image"
                                       className="chart-img"

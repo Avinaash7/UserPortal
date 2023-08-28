@@ -3,6 +3,7 @@ import Footer from "components/common/footer";
 import { GetServerSideProps } from "next";
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
+import Image from "next/image"
 import {
   CommonLandingCustomSettings,
   customPageWithSlug,
@@ -34,7 +35,7 @@ const Bannerdetails = ({
         )}
         <div className="notFound-container">
           {/* <h1 className="">404</h1> */}
-          <img src="/not_found.svg" height={300} alt="" />
+          <Image src="/not_found.svg" height={300} width = {300} alt="" />
           <p className="">Content Not Found</p>
         </div>
       </div>
@@ -44,7 +45,7 @@ const Bannerdetails = ({
     <div>
       <div className="container mb-5 mt-5">
         <div className="section-wrapper-withHtml ">
-          <img src={details.image} />
+          <Image src={details.image} />
           <h1 className="display-4 mt-3">{details.title}</h1>
           <p className="mt-2 mb-2">
             Last revised: {formateData(details.updated_at)}

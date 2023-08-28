@@ -4,6 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { getNewsByCategoryApi } from "service/news";
 import SectionLoading from "components/common/SectionLoading";
+import Image from "next/image"
 
 export const NewsList = ({
   recentNewsData,
@@ -61,7 +62,7 @@ export const NewsList = ({
                       <a href="">
                         <div className="row">
                           <div className="col-md-4">
-                            <img
+                            <Image
                               className="rounded"
                               src={list.thumbnail}
                               alt=""

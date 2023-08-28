@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
+import Image from "next/image"
 
 const Hero = ({ data }: any) => {
   const { t } = useTranslation("common");
@@ -24,7 +25,7 @@ const Hero = ({ data }: any) => {
           )}
         </div>
         <div className="col-md-7 text-center">
-          <img src={data?.launchpad_main_image} />
+          <Image src={data?.launchpad_main_image} />
         </div>
       </div>
     </section>

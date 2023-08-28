@@ -1,3 +1,4 @@
+import Image from "next/image"
 export const BlockTable = () => {
   return (
     <div className="container">
@@ -21,7 +22,7 @@ export const BlockTable = () => {
                         <tr className="tableRow">
                           <td className="py-1">
                             <div className="tableImg d-flex align-items-center">
-                              <img
+                              <Image
                                 src="https://api-tradex.nftarttoken.xyz/images/avatars/yellow-hat.png"
                                 alt=""
                               />

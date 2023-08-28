@@ -5,6 +5,7 @@ import { Formik, Field, Form } from "formik";
 import { SignupAction, useCapchaInitialize } from "state/actions/user";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+import Image from "next/image"
 import { useRouter } from "next/router";
 import { authPageRequireCheck } from "middlewares/ssr-authentication-check";
 //@ts-ignore
@@ -49,7 +50,7 @@ const Signup: NextPage = () => {
         <div className="user-content-text text-center text-md-left">
           <Link href="/">
             <a className="auth-logo" href="">
-              <img
+              <Image
                 width="65%"
                 src={settings.logo || ""}
                 className="pt-5 pt-md-4"
@@ -81,7 +82,7 @@ const Signup: NextPage = () => {
             <div className="user-content-text text-left d-block d-md-none">
               <Link href="/">
                 <a className="auth-logo" href="">
-                  <img
+                  <Image
                     width="60%"
                     src={settings.logo || ""}
                     className="pt-5 pt-md-4"

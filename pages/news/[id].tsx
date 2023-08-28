@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { BiChevronLeft } from "react-icons/bi";
-
+import Image from "next/image"
 import {
   SSRAuthCheck,
   pageAvailabilityCheck,
@@ -52,7 +52,7 @@ const NewsDetails = ({ BlogNewsSettings }: any) => {
             <div className="newsCardText mt-4">
               <h3 className="titleText">{newsDetails?.details?.title}</h3>
               <small>{formateData(newsDetails?.details?.created_at)}</small>
-              <img
+              <Image
                 className="my-3 rounded"
                 src={newsDetails?.details?.thumbnail}
                 alt=""
@@ -79,7 +79,7 @@ const NewsDetails = ({ BlogNewsSettings }: any) => {
                 <a href="">
                   <div className="row">
                     <div className="col-12">
-                      <img className="rounded" src={item.thumbnail} alt="" />
+                      <Image className="rounded" src={item.thumbnail} alt="" />
                     </div>
                     <div className="col-12 pt-3">
                       <div className="newsCardText">

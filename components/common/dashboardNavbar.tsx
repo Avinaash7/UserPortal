@@ -27,6 +27,7 @@ import {
   REFERRAL_TYPE_DEPOSIT,
   REFERRAL_TYPE_TRADE,
 } from "helpers/core-constants";
+import Image from "next/image"
 const DashboardNavbar = () => {
   const { isLoggedIn, user, logo } = useSelector(
     (state: RootState) => state.user
@@ -73,7 +74,7 @@ const DashboardNavbar = () => {
               <div className="cp-user-logo">
                 <Link href="/">
                   <a href="">
-                    <img
+                    <Image
                       src={logo || ""}
                       className="img-fluid cp-user-logo-large"
                       alt=""
@@ -693,7 +694,7 @@ const DashboardNavbar = () => {
                                   ? "99+"
                                   : notificationData?.length}
                               </span>
-                              <img
+                              <Image
                                 src="/notification.png"
                                 className="img-fluid"
                                 alt=""
@@ -796,7 +797,7 @@ const DashboardNavbar = () => {
                                   } cp-user-img`}
                                 >
                                   {user?.photo && (
-                                    <img
+                                    <Image
                                       src={user?.photo}
                                       className="img-fluid"
                                       alt="user"
@@ -814,7 +815,7 @@ const DashboardNavbar = () => {
                                     : "userDeactive"
                                 } big-user-thumb`}
                               >
-                                <img
+                                <Image
                                   src={user?.photo}
                                   className="img-fluid"
                                   alt=""
@@ -904,7 +905,7 @@ const DashboardNavbar = () => {
                     setActive(active ? false : true);
                   }}
                 >
-                  <img src="/menu.svg" className="img-fluid" alt="" />
+                  <Image src="/menu.svg" className="img-fluid" alt="" />
                 </div>
               </div>
             </div>
@@ -930,12 +931,12 @@ const DashboardNavbar = () => {
                       }
                     >
                       <span className="cp-user-icon">
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon"
                           alt=""
                         />
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon-hover"
                           alt=""
@@ -999,12 +1000,12 @@ const DashboardNavbar = () => {
                   <li>
                     <a className="arrow-icon" href="#" aria-expanded="true">
                       <span className="cp-user-icon">
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon"
                           alt=""
                         />
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon-hover"
                           alt=""
@@ -1229,12 +1230,12 @@ const DashboardNavbar = () => {
                   <Link href="/user/referral">
                     <a>
                       <span className="cp-user-icon">
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon"
                           alt=""
                         />
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon-hover"
                           alt=""
@@ -1254,12 +1255,12 @@ const DashboardNavbar = () => {
                   {navbar?.settings?.ststus && (
                     <a className="arrow-icon" href="#" aria-expanded="true">
                       <span className="cp-user-icon">
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon"
                           alt=""
                         />
-                        <img
+                        <Image
                           src=""
                           className="img-fluid cp-user-side-bar-icon-hover"
                           alt=""

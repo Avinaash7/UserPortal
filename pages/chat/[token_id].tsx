@@ -11,6 +11,7 @@ import Pusher from "pusher-js";
 import { SendChantByTokenAction } from "state/actions/launchpad";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "state/store";
+import Image from "next/image"
 import { date } from "yup";
 import { setChatico, seticoChat } from "state/reducer/user";
 import { ChatHistoryByTokenId } from "service/launchpad";
@@ -162,7 +163,7 @@ export const Chat = () => {
                                     : "chat-left"
                                 }>
                                 <>
-                                  <img
+                                  <Image
                                     className="chat-list-avatar"
                                     height={35}
                                     width={35}
@@ -186,7 +187,7 @@ export const Chat = () => {
                                 </>
                               </div>
                               {chat?.file_path && (
-                                <img
+                                <Image
                                   className="image-chatBox chart-header-title"
                                   height={65}
                                   width={105}
@@ -205,7 +206,7 @@ export const Chat = () => {
                               className="image-close">
                               <TiDelete size={25} color="red" />
                             </div>
-                            <img
+                            <Image
                               className="upload-preview-img"
                               src={file}
                               alt="--"

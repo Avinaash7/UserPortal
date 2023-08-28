@@ -1,6 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image"
 
 const PoolCard = () => {
   const { t } = useTranslation("common");
@@ -8,12 +9,12 @@ const PoolCard = () => {
     <Link href={"/launchpool/2"}>
       <div className="pool-card p-3">
         <div className="card-pool-title ">
-          <img alt="GAL" src="/gal.svg" className="pool-icon-small" />
+          <Image alt="GAL" src="/gal.svg" className="pool-icon-small" />
           <h5 className=" ml-2">{t("GAL")}</h5>
         </div>
         <p className="text-center">{t("Stake BUSD, Earn GAL")}</p>
         <div className="center-img-pool">
-          <img alt={t("GAL")} src="/gal.svg" className="pool-icon" />
+          <Image alt={t("GAL")} src="/gal.svg" className="pool-icon" />
         </div>
         <div className="pool-row">
           <p className="pool-title">{t("APY:")}</p>

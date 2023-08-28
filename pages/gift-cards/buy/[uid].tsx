@@ -17,6 +17,7 @@ import { RootState } from "state/store";
 import Footer from "components/common/footer";
 import { GetServerSideProps } from "next";
 import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
+import Image from "next/image"
 
 export default function Index() {
   const { settings } = useSelector((state: RootState) => state.common);
@@ -143,7 +144,7 @@ export default function Index() {
                 <div className="text-center">
                   <div className="gift-card-buy-icon">
                     {buyPageData?.feature_one_icon ? (
-                      <img
+                      <Image
                         className="feature-icon-img"
                         src={buyPageData.feature_one_icon}
                       />
@@ -158,7 +159,7 @@ export default function Index() {
                 <div className="text-center">
                   <div className="gift-card-buy-icon">
                     {buyPageData?.feature_one_icon ? (
-                      <img
+                      <Image
                         className="feature-icon-img"
                         src={buyPageData.feature_two_icon}
                       />
@@ -173,7 +174,7 @@ export default function Index() {
                 <div className="text-center">
                   <div className="gift-card-buy-icon">
                     {buyPageData?.feature_one_icon ? (
-                      <img
+                      <Image
                         className="feature-icon-img"
                         src={buyPageData.feature_three_icon}
                       />

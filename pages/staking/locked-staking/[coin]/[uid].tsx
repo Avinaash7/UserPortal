@@ -7,6 +7,7 @@ import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import Image from "next/image"
 import { TotalInvestmentBonus } from "service/staking";
 import {
   GetOfferlistDetailsAction,
@@ -68,7 +69,7 @@ const LockedStaking = () => {
               <div className="row">
                 <div className="col-md-6">
                   <div className="tableImg d-flex align-items-center">
-                    <img src={details?.coin_icon} alt="" />
+                    <Image src={details?.coin_icon} alt="" />
                     <h5>{details?.coin_type}</h5>
                   </div>
                   <div className="row pt-6 mt-3">

@@ -3,6 +3,7 @@ import ProfileSidebar from "layout/profile-sidebar";
 import React from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Image from "next/image"
 
 import countries from "lib/values/country.json";
 import { useDispatch, useSelector } from "react-redux";
@@ -52,7 +53,7 @@ const Edit: NextPage = () => {
                     <div className="col-lg-4 col-md-4 col-12">
                       <div className="user-profile-left">
                         <div className="user-thumbnail">
-                          <img src={user?.photo} className="img-fluid" alt="" />
+                          <Image src={user?.photo} className="img-fluid" alt="" />
                           <div className="uplode-profile">
                             <input
                               type="file"

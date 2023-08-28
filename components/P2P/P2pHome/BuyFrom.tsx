@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { getAvailableBalance } from "service/p2p";
 import { placeP2POrderAction } from "state/actions/p2p";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image"
 
 export const BuyFrom = ({
   details,
@@ -65,7 +66,7 @@ export const BuyFrom = ({
         <div className="row">
           <div className="col-md-6">
             <div className="tableImg d-flex align-items-center">
-              <img
+              <Image
                 src="https://api-tradex.nftarttoken.xyz/images/avatars/yellow-hat.png"
                 alt=""
               />

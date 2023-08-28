@@ -1,6 +1,7 @@
 import ImageComponent from "components/common/ImageComponent";
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
+import Image from "next/image"
 
 const BottomDetails = ({ landing }: any) => {
   const { t } = useTranslation("common");
@@ -21,7 +22,7 @@ const BottomDetails = ({ landing }: any) => {
                     alt="integration"
                     height={300}
                   /> */}
-                  <img
+                  <Image
                     className="trend-image"
                     src={landing?.secure_trade_left_img}
                     alt="trade-imge"

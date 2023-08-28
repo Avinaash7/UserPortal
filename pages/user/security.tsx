@@ -4,6 +4,7 @@ import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "state/store";
 import Link from "next/link";
+import Image from "next/image"
 import { UserSettingsAction } from "state/actions/settings";
 import { useEffect, useState } from "react";
 import useTranslation from "next-translate/useTranslation";
@@ -52,7 +53,7 @@ const Security: NextPage = () => {
                   <div className="single-security">
                     <div className="security-left">
                       <div className="security-info">
-                        <img
+                        <Image
                           src="/fingerprint-scan.svg"
                           alt="fingerprint"
                           className="security-icon"
@@ -82,7 +83,7 @@ const Security: NextPage = () => {
                   <div className="single-security">
                     <div className="security-left">
                       <div className="security-info">
-                        <img
+                        <Image
                           src="/smartphone.svg"
                           alt="smartphone"
                           className="security-icon"
@@ -119,7 +120,7 @@ const Security: NextPage = () => {
                   <div className="single-security">
                     <div className="security-left">
                       <div className="security-info">
-                        <img
+                        <Image
                           src="/email.svg"
                           alt="email"
                           className="security-icon"
@@ -155,7 +156,7 @@ const Security: NextPage = () => {
                   <div className="single-security">
                     <div className="security-left">
                       <div className="security-info">
-                        <img
+                        <Image
                           src="/key.svg"
                           alt="key"
                           className="security-icon"

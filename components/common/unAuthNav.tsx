@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image"
 import { useDispatch, useSelector } from "react-redux";
 import { BsFillMoonFill, BsFillSunFill, BsBarChartLine } from "react-icons/bs";
 import { FaPeopleArrows } from "react-icons/fa";
@@ -51,7 +52,7 @@ const UnAuthNav = () => {
               <div className="cp-user-logo">
                 <Link href="/">
                   <a href="">
-                    <img
+                    <Image
                       src={logo || ""}
                       className="img-fluid cp-user-logo-large"
                       alt=""
@@ -190,7 +191,7 @@ const UnAuthNav = () => {
                     setActive(active ? false : true);
                   }}
                 >
-                  <img src="/menu.svg" className="img-fluid" alt="" />
+                  <Image src="/menu.svg" className="img-fluid" alt="" />
                 </div>
               </div>
             </div>

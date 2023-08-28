@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import React, { useEffect, useState } from "react";
 import { IoWalletOutline } from "react-icons/io5";
 import { TiArrowRepeat } from "react-icons/ti";
-
+import Image from "next/image"
 import {
   HiOutlineBanknotes,
   HiOutlinePresentationChartLine,
@@ -169,7 +169,7 @@ const MyWallet: NextPage = () => {
                               <tr id="" key={index}>
                                 <td>
                                   <div className="asset">
-                                    <img
+                                    <Image
                                       className="asset-icon"
                                       src={item.coin_icon || "/bitcoin.png"}
                                       alt=""

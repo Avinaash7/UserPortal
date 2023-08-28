@@ -1,6 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { SetupGoogle2faAction } from "state/actions/settings";
+import Image from "next/image"
 
 const GoogleAuthModal = ({ settings, setSettings }: any) => {
   const [code, setCode] = React.useState<string>("");
@@ -48,7 +49,7 @@ const GoogleAuthModal = ({ settings, setSettings }: any) => {
               <div className="row">
                 <div className="col-4">
                   {settings?.user?.google2fa === 0 && (
-                    <img src={settings?.qrcode} className="img-fluid" alt="" />
+                    <Image src={settings?.qrcode} className="img-fluid" alt="" />
                   )}
                 </div>
                 <div className="col-8">

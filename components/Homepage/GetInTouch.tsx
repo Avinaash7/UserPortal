@@ -1,5 +1,6 @@
 import ImageComponent from "components/common/ImageComponent";
 import React from "react";
+import Image from "next/image"
 
 const GetInTouch = ({ landing, featureListdata }: any) => {
   return (
@@ -15,7 +16,7 @@ const GetInTouch = ({ landing, featureListdata }: any) => {
               {featureListdata?.map((feature: any, index: any) => (
                 <div className="col-lg-4 col-md-6 mt-4" key={index}>
                   <a href="#" className="single-card">
-                    <img
+                    <Image
                       className="card-icon"
                       src={feature.feature_icon}
                       alt="icon"

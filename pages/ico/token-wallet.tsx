@@ -11,6 +11,7 @@ import Footer from "components/common/footer";
 import { customPage, landingPage } from "service/landing-page";
 import LaunchpadSidebar from "layout/launchpad-sidebar";
 import SectionLoading from "components/common/SectionLoading";
+import Image from "next/image"
 
 const MyWallet: NextPage = () => {
   const [history, setHistory] = useState<any>([]);
@@ -131,7 +132,7 @@ const MyWallet: NextPage = () => {
                             <tr id="" key={index}>
                               <td>
                                 <div className="asset">
-                                  <img
+                                  <Image
                                     className="asset-icon"
                                     src={item?.image_path || "/bitcoin.png"}
                                     alt=""

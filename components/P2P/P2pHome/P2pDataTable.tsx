@@ -6,6 +6,7 @@ import { BUY } from "helpers/core-constants";
 import { RootState } from "state/store";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
+import Image from "next/image"
 
 export const P2pDataTable = ({
   history,
@@ -40,7 +41,7 @@ export const P2pDataTable = ({
                     <td>
                       <Link href={"/p2p/profile/" + item?.user_id}>
                         <div className="tableImg d-flex align-items-center">
-                          <img src={item?.user?.photo} alt="" />
+                          <Image src={item?.user?.photo} alt="" />
                           <h5>{item?.user?.nickname}</h5>
                         </div>
                       </Link>

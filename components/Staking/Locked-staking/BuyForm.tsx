@@ -1,5 +1,6 @@
 import React from "react";
 import { TfiHandPointRight } from "react-icons/tfi";
+import Image from "next/image"
 
 const BuyForm = () => {
   return (
@@ -7,7 +8,7 @@ const BuyForm = () => {
       <div className="row">
         <div className="col-md-6">
           <div className="tableImg d-flex align-items-center">
-            <img
+            <Image
               src="https://api-tradex.nftarttoken.xyz/images/avatars/yellow-hat.png"
               alt=""
             />

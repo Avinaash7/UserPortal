@@ -1,6 +1,7 @@
 import ImageComponent from "components/common/ImageComponent";
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
+import Image from "next/image"
 
 const DistributionSection = ({ landing }: any) => {
   const { t } = useTranslation("common");
@@ -17,7 +18,7 @@ const DistributionSection = ({ landing }: any) => {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="trade-anywhere-left text-center">
-                    <img
+                    <Image
                       className="trend-image"
                       src={landing?.trade_anywhere_left_img}
                       alt="trade-imge"
@@ -40,7 +41,7 @@ const DistributionSection = ({ landing }: any) => {
                               href={landing?.apple_store_link}
                               className="item-link"
                             >
-                              <img
+                              <Image
                                 className="icon"
                                 src="/apple-logo.png"
                                 alt="apple-logo"
@@ -53,7 +54,7 @@ const DistributionSection = ({ landing }: any) => {
                         {landing?.google_store_link && (
                           <li className="single-item">
                             <a href="#" className="item-link">
-                              <img
+                              <Image
                                 className="icon"
                                 src="/google-play.png"
                                 alt="google-play"
@@ -69,7 +70,7 @@ const DistributionSection = ({ landing }: any) => {
                               href={landing?.macos_store_link}
                               className="item-link"
                             >
-                              <img
+                              <Image
                                 className="icon"
                                 src="/command-symbol.png"
                                 alt="command-symbol"
@@ -85,7 +86,7 @@ const DistributionSection = ({ landing }: any) => {
                               href={landing?.windows_store_link}
                               className="item-link"
                             >
-                              <img
+                              <Image
                                 className="icon"
                                 src="/windows.png"
                                 alt="windows"
@@ -101,7 +102,7 @@ const DistributionSection = ({ landing }: any) => {
                               href={landing?.windows_store_link}
                               className="item-link"
                             >
-                              <img
+                              <Image
                                 className="icon"
                                 src="/linux.png"
                                 alt="linux"
@@ -114,7 +115,7 @@ const DistributionSection = ({ landing }: any) => {
                         {landing?.api_link && (
                           <li className="single-item">
                             <a href={landing?.api_link} className="item-link">
-                              <img className="icon" src="/api.png" alt="api" />
+                              <Image className="icon" src="/api.png" alt="api" />
                               <span>{t("API")}</span>
                             </a>
                           </li>

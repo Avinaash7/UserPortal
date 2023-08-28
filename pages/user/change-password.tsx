@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import ProfileSidebar from "layout/profile-sidebar";
 import React from "react";
 import * as Yup from "yup";
-
+import Image from "next/image"
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { SSRAuthCheck } from "middlewares/ssr-authentication-check";
 import { ChangePasswordAction } from "state/actions/user";
@@ -127,7 +127,7 @@ const PhoneVerification: NextPage = () => {
                         </div>
                         <div className="col-lg-6 col-md-4  d-flex align-items-center justify-content-center">
                           <div className="reset-password-right text-center" style={{marginTop: '0px'}}>
-                            <img
+                            <Image
                               src="/reset-password.svg"
                               alt="reset-password"
                             />

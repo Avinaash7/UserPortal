@@ -9,6 +9,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import useTranslation from "next-translate/useTranslation";
 import { useSelector } from "react-redux";
 import { RootState } from "state/store";
+import Image from "next/image"
 import { CAPTCHA_TYPE_GEETESTCAPTCHA, CAPTCHA_TYPE_RECAPTCHA } from "helpers/core-constants";
 const ResetPassword: NextPage = () => {
   const { t } = useTranslation("common");
@@ -39,7 +40,7 @@ const ResetPassword: NextPage = () => {
           <div className="user-content-text text-center text-md-left">
             <Link href="/">
               <a className="auth-logo" href="">
-                <img
+                <Image
                   width="65%"
                   src={settings.logo || ""}
                   className="pt-5 pt-md-4"
@@ -70,7 +71,7 @@ const ResetPassword: NextPage = () => {
               <div className="user-content-text text-left d-block d-md-none">
                 <Link href="/">
                   <a className="auth-logo" href="">
-                    <img
+                    <Image
                       width="60%"
                       src={settings.logo || ""}
                       className="pt-5 pt-md-4"

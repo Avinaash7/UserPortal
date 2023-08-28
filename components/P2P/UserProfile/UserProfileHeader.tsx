@@ -1,5 +1,6 @@
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { IoIosEye } from "react-icons/io";
+import Image from "next/image"
 
 export const UserProfileHeader = () => {
   return (
@@ -7,7 +8,7 @@ export const UserProfileHeader = () => {
       <div className="row py-4 align-items-center tableRow">
         <div className="col-md-6">
           <div className="tableImg d-flex align-items-center">
-            <img
+            <Image
               className="userProfileImg"
               src="https://api-tradex.nftarttoken.xyz/images/avatars/yellow-hat.png"
               alt=""
