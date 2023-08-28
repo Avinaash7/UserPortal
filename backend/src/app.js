@@ -45,6 +45,9 @@ app.use(logErrors)
 app.use(errorHandler);
 
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(process.env.APP_PORT, (err) => {
+    if (err) {
+        return console.error(err);
+    }
     console.log(`app listening to port ${process.env.APP_PORT}`);
 })
